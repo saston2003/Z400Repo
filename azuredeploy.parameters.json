@@ -27,7 +27,7 @@
             "value": "TEMPLATE1"
         },
         "virtualMachineRG": {
-            "value": "ARMTEM1"
+            "value": "ARMTEM01"
         },
         "osDiskType": {
             "value": "Standard_LRS"
