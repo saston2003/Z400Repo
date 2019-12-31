@@ -1,37 +1,45 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "adminUsername": {
-      "value": "Manage"
-    },
-    "adminPassword": {
-      "value": "Password123!!"
-    },
-    "tagValues": {
-      "value": {
-        "Department": "ICT",
-        "Environment": "Development",
-        "Function": "Template"
-      }
-    },
-    "virtualMachineName": {
-      "value": "DEV-SRV-UKS-412"
-    },
-    "VirtualMachineSize": {
-      "value": "Standard_DS1_v2"
-    },
-    "ManageddiskType": {
-      "value": "Standard_LRS"
-    },
-    "subnetname": {
-      "value": "SUBNETONE"
-    },
-    "windowsOSVersion": {
-      "value": "2016-Datacenter"
-    },
-    "Location": {
-      "value": "uksouth"
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "networkInterfaceName": {
+            "value": "template1111"
+        },
+        "location": {
+        "value": "westeurope"
+        },
+        "subnetName": {
+            "value": "Subnet3"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/5431caeb-4932-47a6-b753-42903a17fed2/resourceGroups/labnet1/providers/Microsoft.Network/virtualNetworks/labnet1"
+        },
+        "publicIpAddressName": {
+            "value": "TEMPLATE1-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "TEMPLATE1"
+        },
+        "virtualMachineRG": {
+            "value": "ARMTEM1"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_A2"
+        },
+        "adminUsername": {
+            "value": "MANAGE"
+        },
+        "adminPassword": {
+            "value": "Password123!"
+        }
     }
-  }
 }

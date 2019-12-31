@@ -5,6 +5,9 @@
         "networkInterfaceName": {
             "type": "string"
         },
+           "location": {
+            "type": "string"
+        },
         "subnetName": {
             "type": "string"
         },
