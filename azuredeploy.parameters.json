@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "Manage"
+    },
+    "adminPassword": {
+      "value": "Password123!!"
+    },
+    "tagValues": {
+      "value": {
+        "Department": "ICT",
+        "Environment": "Development",
+        "Function": "Template"
+      }
+    },
+    "virtualMachineName": {
+      "value": "DEV-SRV-UKS-412"
+    },
+    "VirtualMachineSize": {
+      "value": "Standard_DS1_v2"
+    },
+    "ManageddiskType": {
+      "value": "Standard_LRS"
+    },
+    "subnetname": {
+      "value": "SUBNETONE"
+    },
+    "windowsOSVersion": {
+      "value": "2016-Datacenter"
+    },
+    "Location": {
+      "value": "uksouth"
+    }
+  }
+}
