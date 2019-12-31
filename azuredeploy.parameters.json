@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "networkInterfaceName": {
-            "value": "template1111"
+            "value": "template3112"
         },
         "location": {
         "value": "westeurope"
