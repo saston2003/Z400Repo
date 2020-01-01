@@ -50,7 +50,9 @@
     },
     "variables": {
         "vnetId": "[parameters('virtualNetworkId')]",
-        "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]"
+        "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
+        "firstCustomScriptExtensionScriptStorageContainer": "templates",
+        "firstCustomScriptExtensionScriptFileName": "install-IIS.ps1"
     },
     "resources": [
         {
