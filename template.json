@@ -40,7 +40,13 @@
         },
         "adminPassword": {
             "type": "secureString"
-        }
+        },
+        "storageAccountName": {
+      "type": "string",
+      "metadata": {
+        "description": "Auto-generated container in staging storage account to receive post-build staging folder upload"
+      }
+    }
     },
     "variables": {
         "vnetId": "[parameters('virtualNetworkId')]",
@@ -127,7 +133,31 @@
                     }
                 }
             }
+        },
+        {
+      "name": "[concat(parameters('virtualMachineName'),'/','firstCustomScriptExtension')]",
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2016-03-30",
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachineName'))]"
+      ],
+      "tags": {
+        "displayName": "firstCustomScriptExtension"
+      },
+      "properties": {
+        "publisher": "Microsoft.Compute",
+        "type": "CustomScriptExtension",
+        "typeHandlerVersion": "1.4",
+        "autoUpgradeMinorVersion": true,
+        "settings": {
+          "fileUris": [
+            "[concat(parameters('storageAccountName'), '/', variables('firstCustomScriptExtensionScriptStorageContainer'), '/', variables('firstCustomScriptExtensionScriptFileName'))]"
+          ],
+          "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ',  variables('firstCustomScriptExtensionScriptFileName'), ' -featureName web-server -serviceName w3svc')]"
         }
+      }
+    }
     ],
     "outputs": {
         "adminUsername": {
