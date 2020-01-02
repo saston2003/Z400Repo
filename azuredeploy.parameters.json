@@ -15,7 +15,7 @@
             "value": "/subscriptions/5431caeb-4932-47a6-b753-42903a17fed2/resourceGroups/labnet1/providers/Microsoft.Network/virtualNetworks/labnet1"
         },
         "publicIpAddressName": {
-            "value": "TEMPLATE1-ip"
+            "value": "TEMPLATE1A-ip"
         },
         "publicIpAddressType": {
             "value": "Dynamic"
