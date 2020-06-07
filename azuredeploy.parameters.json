@@ -40,6 +40,9 @@
         },
         "adminPassword": {
             "value": "Password123!"
-        }
+        },
+        "storageAccountName": {
+            "value": "https://3ameternal.blob.core.windows.net"
+      }
     }
 }
